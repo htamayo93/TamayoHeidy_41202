@@ -30,10 +30,10 @@ int main(int argc, char** argv) {
     
     //Output the results
     cout<<"Number of Customers Surveyed = "        <<cstSrvy<<endl;
-    cout<<"Percentage of Energy Drinkers ="        <<static_cast<int>(peDrnk)<<"%"<<endl;
-    cout<<"Percentage of Energy Citrus Drinkers =" <<static_cast<int>(pcDrnk)<<"%"<<endl;
-    cout<<"Number of Energy Drinkers ="            <<neDrnk<<endl;
-    cout<<"Number of Energy Citrus Drinkers ="     <<ncDrnk<<endl;
+    cout<<"Percentage of Energy Drinkers = "        <<static_cast<int>(peDrnk)<<"%"<<endl;
+    cout<<"Percentage of Energy Citrus Drinkers = " <<static_cast<int>(pcDrnk)<<"%"<<endl;
+    cout<<"Number of Energy Drinkers = "            <<neDrnk<<endl;
+    cout<<"Number of Energy Citrus Drinkers = "     <<ncDrnk<<endl;
     
     //Exit stage right
     return 0;

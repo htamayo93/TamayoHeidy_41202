@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Energy Drinks survey
+PROJECTNAME=Gaddis_8thEd_Chap2_Prob18
 
 # Active Configuration
 DEFAULTCONF=Debug
