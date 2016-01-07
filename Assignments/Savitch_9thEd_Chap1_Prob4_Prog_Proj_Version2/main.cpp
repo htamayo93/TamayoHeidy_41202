@@ -52,11 +52,11 @@ int main(int argc, char** argv) {
     //Output the results
     cout<<"Free Fall Distance pow="<<setw(10)<<distance<<"(ft)"<<endl;
     
-    //Calculate the number of
+    //Calculate the number
     distance=0.5f*GRAVITY*exp(2*log(drpTime));
     
     //Output the results
-    cout<<"Free Fall Distance exp(log)="<<setw(10)<<distance<<"(ft)" <<endl;
+    cout<<"Free Fall Distance exp(log)="<<setw(10)<<distance<<"(ft)"<<endl;
     
     //Output the results to a file
     out<<fixed<<setprecision(3)<<showpoint;//Format the Distance to 3 decimals
