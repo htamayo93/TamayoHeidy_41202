@@ -87,17 +87,18 @@ int main(int argc, char** argv) {
     cout<<(!(x||y)?'T':'F')<<"        ";
     cout<<(!x&&!y?'T':'F')<<"      "<<endl;
     
+    int a,b,temp;
     //Swap using temp
-   /* const char a=2;
-    const char b=3;
-    cout<<"The value of a is "<<a<<endl;
-    cout<<"The value of b is "<<b<<endl;
-    b=(a^b)^b=a;
-    a=(a^b)^a=b;
-    temp=a;
-    cout<<"The value of a is "<<a<<endl;
-    cout<<"The value of b is "<<b<<endl;*/
+    a=2,b=3;
+    cout<<"a is "<<a<<endl;
+    cout<<"b is "<<b<<endl;
     //Swap using exclusive or operator
+    a=temp;
+    a=b;
+    b=temp;
+    cout<<"a is "<<a<<endl;
+    cout<<"b is "<<b<<endl;
+    
     
     //Exit stage right
     return 0;
