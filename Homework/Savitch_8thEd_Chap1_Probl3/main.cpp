@@ -1,12 +1,20 @@
 /* 
  * File:   main.cpp
- * Author: heidy
- *
+ * Author: Heidy Tamayo
  * Created on January 10, 2016, 9:21 PM
+ * Purpose: Modification of the second problem in order to divide in the calculation
+ * instead of multiplying and testing for an error when dividing by 0.
  */
 
+//System Libraries
 #include <iostream>
 using namespace std;
+
+//User Libraries
+
+//Global Constants
+
+//Function Prototypes
 
 int main(int argc, char** argv) {
     
