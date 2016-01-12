@@ -14,7 +14,6 @@ using namespace std;
 
 //Global Constants
 float METRIC=35273.92f;//conversion of a metric ton to ounces;
-float CEREAL=14.0f;//Average weight of cereal in ounces
 
 //Functional Prototypes
 
@@ -25,25 +24,31 @@ int main(int argc, char** argv) {
     float metric;
     float ounces;
     float cereal;
-    float boxes;
+    int boxes;
+    char answer;
     
-    //Output asking how many boxes of cereal does the user have
-    cout<<"How many boxes of cereal do you have?"<<endl;
+    do {  
+    //Output asking how many ounces the cereal box contains
+    cout<<"How many ounces does your cereal box contain?"<<endl;
     
-    //Input of how many boxes.
-    cin>>cereal;
+    //Input of how many ounces the cereal box contains.
+    cin>>ounces;
     
     //Calculation of the weight of cereal and how many boxes of cereal would be needed for 1 metric ton.
-    ounces=cereal*CEREAL;
     metric=ounces/METRIC;
-    boxes=METRIC/CEREAL;
+    boxes=METRIC/ounces;
     
     //Output of results
     cout<<"The weight of your cereal is "<<ounces<<" ounces."<<endl;
     cout<<"The weight of your cereal in metric tons is "<<metric<<endl;
     cout<<"In order to have 1 metric ton of cereal you would need "<<boxes<< " boxes of cereal."<<endl;
+    cout<<"Repeat the Program?"<<endl;
+    cout<<"Type y for yes or any other character to end the program."<<endl;///If the user would like the program repeated 
+    cin>>answer;
     
-    //Exit stage right
+    }while(answer=='y');
+   
+   //Exit stage right
     return 0;
 }
 
