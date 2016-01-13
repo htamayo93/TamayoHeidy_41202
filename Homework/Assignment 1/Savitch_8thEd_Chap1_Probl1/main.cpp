@@ -2,7 +2,8 @@
  * File:   main.cpp
  * Author: Heidy Tamayo
  * Created on January 10, 2016, 8:21 PM
- * Purpose:Testing the program from Display 1.8
+ * Purpose:Testing the program from Display 1.8/Ensuring the program is written 
+ * point by point.
  */
 
 //System Libraries
