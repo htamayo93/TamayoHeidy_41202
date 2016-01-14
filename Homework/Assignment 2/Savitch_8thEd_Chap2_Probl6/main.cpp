@@ -34,15 +34,8 @@ int main(int argc, char** argv) {
     {
         cout<<"It is legal to hold the meeting."<<endl;
         add=roomCap-numPeo;
-        while (add>0)
-        {
-            cout<<"An additional "<<add;
-            cout<<" can attend the meeting without breaking fire law regulations."<<endl;
-            while (n=1)
-            {
-                n=n+1;
-            }
-        }
+        cout<<"An additional "<<add;
+        cout<<" can attend the meeting without breaking fire law regulations."<<endl;
     }
     return 0;
 }
