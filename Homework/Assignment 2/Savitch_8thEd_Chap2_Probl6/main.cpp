@@ -7,7 +7,6 @@
 
 //System Libraries
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 //User Libraries
@@ -18,15 +17,15 @@ using namespace std;
 
 //Execution Begins Here
 int main(int argc, char** argv) {
-    int roomCap, numPeo, remove, add;
+    int roomCap, numPeo, remove, add, n;
     
     cout<<"How many people will be attending the meeting?"<<endl;
     cin>>numPeo;
-    cout"What is the room capacity of the room?"<<endl;
+    cout<<"What is the room capacity of the room?"<<endl;
     cin>>roomCap;
     
     if (numPeo>roomCap)
-    {cout<<"The meeting cannot be held to due fire law regulations"<<endl;
+    {cout<<"The meeting cannot be held to due fire law regulations."<<endl;
      remove=numPeo-roomCap;
      cout<<"In order to meet the regulations "<<remove;
      cout<<" people must be excluded from the meeting."<<endl;
@@ -38,7 +37,11 @@ int main(int argc, char** argv) {
         while (add>0)
         {
             cout<<"An additional "<<add;
-            cout<<" can attend the meeting without breaking fire law regulations"<<endl;
+            cout<<" can attend the meeting without breaking fire law regulations."<<endl;
+            while (n=1)
+            {
+                n=n+1;
+            }
         }
     }
     return 0;
