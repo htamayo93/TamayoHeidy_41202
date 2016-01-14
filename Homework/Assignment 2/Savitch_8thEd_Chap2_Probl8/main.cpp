@@ -11,16 +11,16 @@
 #include <iomanip>
 using namespace std;
 
-float CNV=.001f;
+float CNV=.01f;
 
 int main(int argc, char** argv) {
     int years;//Number of years the user wants to know the price of
-    int n;
+    int n;//Value of year starting from 0 and increasing by 1
     float rate;//Rate of inflation in percentage
     float r;//Rate once converted to decimal
     float item;//Initial price of the item
     float price;//Price of item after n years and rate
-    //float newPric;//New price of the item
+    float newPric;//New price of the item
     string name;//name of the item
     
     cout<<fixed<<setprecision(2);
@@ -34,17 +34,16 @@ int main(int argc, char** argv) {
     cin>>years;
     
     r=rate*CNV;
-    n=0;
+    n=1;
     
     while (n<years)
     {
-        price=item*years*r;
-        price=price+item;
-        price=price;
+        price=item*n*r;
+        newPric=price+item;
         n=n+1;
     }
-    cout<<"After "<<years<<" years the cost of "<<name<<" will be $"<<price<<"."<<endl;
-
+    cout<<"After "<<years<<" years the cost of "<<name<<" will be $"<<newPric<<"."<<endl;
+    //cout<<price<<endl;
     return 0;
 }
 
