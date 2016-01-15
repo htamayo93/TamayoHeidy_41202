@@ -18,16 +18,18 @@ using namespace std;
 
 //Execution Begins Here
 int main(int argc, char** argv) {
-    float weiMou;
-    float myWei;
-    float soda;
-    float sweet;
-    int death;
-    char answer;
+    float weiMou;//Weight of mouse in LBS
+    float myWei;//Desired weight of the user in LBS
+    float soda;//Amount of sweetener
+    float sweet;//Amount of sweetener that killed the mouse
+    int death;//Amount of soda that can be consumed before dying
+    char answer;//Input if user would like to repeat the program
     float DIETSOD=.001f;//Soda contains 1/10th of 1% artificial sweetener
-    unsigned int n=1;
+    unsigned int n=1;//Amount of soda
     
+    //Do while loop to repeat program as the user wishes
     do{
+    //Input requests
     cout<<"What is the weight of the mouse (lbs)?"<<endl;
     cin>>weiMou;
     cout<<"How much sweetener is needed to kill the mouse in lbs?"<<endl;
@@ -36,15 +38,19 @@ int main(int argc, char** argv) {
     cin>>myWei;
     
     death=sweet/weiMou;//amount of sweetener will
- 
+    
+    //While loop to calculate how much soda can be consumed
     while (death>(soda/myWei))
-        {soda=DIETSOD*n;//amount of sweetener per soda  
+    {
+        soda=DIETSOD*n;//amount of sweetener per soda  
         n=n+1;
-        }
+    }
+    //Output of results
     cout<<"                           "<<endl;
     cout<<"The weight of the mouse is "<<weiMou<<" pounds."<<endl;
     cout<<"Your desired weight is "<<myWei<<" pounds."<<endl;
-    cout<<"In order to reach your desired weight without dying you should take no more than "<<n<<" sodas."<<endl;
+    cout<<"In order to reach your desired weight without dying you should take no more than "<<n;
+    cout<<" sodas."<<endl;
     cout<<"                                  "<<endl;
     cout<<"Would you like to repeat the program?"<<endl;
     cout<<"Type for y for yes and another character to end the program."<<endl;
@@ -53,5 +59,6 @@ int main(int argc, char** argv) {
     
     }while (answer=='y');
     
+    //Exit stage right
     return 0;
 }

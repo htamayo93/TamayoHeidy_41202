@@ -21,11 +21,10 @@ float METRIC=35273.92f;//conversion of a metric ton to ounces;
 int main(int argc, char** argv) {
     
     //Determine the variables and initialize
-    float metric;
-    float ounces;
-    float cereal;
-    int boxes;
-    char answer;
+    float metric;//Weight of cereal in metric tons
+    float ounces;//Weight of cereal in ounces
+    int boxes;//Number of boxes needed to have a metric ton
+    char answer;//If you would like to repeat the program
     
     do {  
     //Output asking how many ounces the cereal box contains
