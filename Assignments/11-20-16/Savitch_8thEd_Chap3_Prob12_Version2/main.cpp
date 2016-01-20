@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Heidy Tamayo
- * Created on January 19, 2016, 11:47 AM
+ * Created on January 20, 2016, 8:39 AM
  * Purpose: Approximate value of pi
  */
 
