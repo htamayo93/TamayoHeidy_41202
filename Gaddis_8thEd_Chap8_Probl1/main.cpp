@@ -54,12 +54,12 @@ int main(int argc, char** argv) {
 int numList(int accnum[],int accuse){
     int i=0;
     int pos=-1;
-    bool find=false;
-    while(i<18&&!find)
+    bool look=false;
+    while(i<18&&!look)
     {
         if(accnum[i]==accuse)
         {
-            find=true;
+            look=true;
             pos=i;
         }
         i++;

@@ -14,27 +14,31 @@ using namespace std;
 //Global Constants
 
 //Functional Prototypes
-int numList(int[], int);
+int lotList(int[], int);
 
 //Execution Begins Here
 int main(int argc, char** argv) {
 
-    int accnum[18]={
-        13579,26791,26792, };
-    int accuse,find;
+    int lottNum[10]={
+        13579,26791,26792,33445,55555,
+        62483,77777,79422,85647,93121};
+    int lottWin;
+    int find;
     
-    cout<<"This program will allow a user to enter a charge account number and "<<endl;
-    cout<<"the program will determine if the user is valid. "<<endl;
-    cout<<endl<<"Please enter the number."<<endl;
-    cin>>accuse;
+    cout<<"This program will allow a user to enter a number to determine if they"<<endl;
+    cout<<"have won the lottery."<<endl;
+    cout<<"Please enter your lottery number."<<endl;
+    cin>>lottWin;
     
-    find=numList(accnum,accuse);
-    
-    if(find==-1){
-        cout<<"You have enter an invalid number."<<endl;
-    }else{
-        cout<<"This number is valid."<<endl;
-        cout<<accnum[find]<<endl;
+    find=lotList(lottNum,lottWin);
+    if(find==-1)
+    {
+        cout<<"You did not win the lottery :(."<<endl;
+    }
+    else
+    {
+        cout<<"You won the lottery! :D"<<endl;
+        cout<<lottNum[find]<<endl;
     }
     return 0;
 }
@@ -49,15 +53,15 @@ int main(int argc, char** argv) {
 //Outputs:
 //  pos->Index where value is found
 //******************************************************************************
-int numList(int accnum[],int accuse){
+int lotList(int lottNum[],int lottWin){
     int i=0;
     int pos=-1;
-    bool find=false;
-    while(i<18&&!find)
+    bool look=false;
+    while(i<10&&!look)
     {
-        if(accnum[i]==accuse)
+        if(lottNum[i]==lottWin)
         {
-            find=true;
+            look=true;
             pos=i;
         }
         i++;
