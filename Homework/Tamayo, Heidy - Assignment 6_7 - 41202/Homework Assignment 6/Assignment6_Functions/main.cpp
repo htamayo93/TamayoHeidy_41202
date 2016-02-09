@@ -6,9 +6,9 @@
  */
 
 //System Libraries
-#include <iostream>
-#include <string>
-#include <iomanip>
+#include <iostream> //I/0
+#include <string>   //String
+#include <iomanip>  //Formatting
 using namespace std;
 
 //User Libraries
@@ -16,13 +16,13 @@ using namespace std;
 //Global Constants
 
 //Functional Prototypes
-void problem1();
-void problem2();
-void problem3();
-void problem4();
-void problem5();
-void problem6();
-void problem7();
+void problem1(); //Problem 1
+void problem2(); //Problem 2
+void problem3(); //Problem 3
+void problem4(); //Problem 4
+void problem5(); //Problem 5
+void problem6(); //Problem 6
+void problem7(); //Problem 7
     
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
 void problem1()
 {
    //Declare and initialize the variables
-    int tenarry[10],max,min,i;
+    int tenarry[10],max,min,i;//array for ten integers, max value, min value, increments
     
     //Output of program description and requesting input
     cout<<"This program will allow the user to enter ten integers and display the"<<endl;
@@ -105,8 +105,8 @@ void problem1()
 void problem2()
 {
     //Declare and initialize the variables
-    float month[12],max,min,sum;
-    int i;
+    float month[12],max,min,sum;//month array,max value of rainfall, min value of rainfall, sum of rainfall 
+    int i;//increment for for loop
     
     cout<<fixed<<setprecision(2)<<showpoint;
     
@@ -150,7 +150,7 @@ void problem2()
 void problem3()
 {
     //Declare and initialize the variables
-    string names[5]={"MILD","MEDIUM","SWEET","HOT","ZESTY"};
+    string names[5]={"MILD","MEDIUM","SWEET","HOT","ZESTY"};//String name for the type of salsa
     int sells[5],i,max,min,sum=0;
     
     //Output of program description and intput request

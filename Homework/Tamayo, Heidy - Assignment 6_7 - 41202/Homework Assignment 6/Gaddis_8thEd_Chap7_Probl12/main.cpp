@@ -6,9 +6,9 @@
  */
 
 //System Libraries
-#include <iostream>
-#include <cstring>
-#include <iomanip>
+#include <iostream> //I/O
+#include <cstring>  //string 
+#include <iomanip>  //Formatting
 using namespace std;
 
 //User Libraries
