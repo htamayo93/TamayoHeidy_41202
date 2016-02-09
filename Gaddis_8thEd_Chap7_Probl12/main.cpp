@@ -43,7 +43,6 @@ int main(int argc, char** argv) {
     {
         cin>>stuSco[i];
         sum[0]=sum[0]+stuSco[i];
-        sum[0]=sum[0]/4;
     }
     cout<<"Please enter your test scores "<<stuName[1]<<"."<<endl;
         for(i=0;i<4;i++)
@@ -72,6 +71,7 @@ int main(int argc, char** argv) {
     for(i=0;i<5;i++)
     {
         cout<<"For "<<stuName[i]<<" the average score was "<<sum[i]/4<<"."<<endl;
+        sum[i]=sum[i]/4;
         if (sum[i]>=90){
             cout<<"Your grade is an A."<<endl;}
         else if (sum[i]<=89&&sum[i]>=80){
@@ -84,7 +84,6 @@ int main(int argc, char** argv) {
             cout<<"Your grade is an F."<<endl;}
     }
         
-
     //Exit stage right
     return 0;
 }
