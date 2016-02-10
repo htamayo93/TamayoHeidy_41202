@@ -151,7 +151,8 @@ void problem3()
 {
     //Declare and initialize the variables
     string names[5]={"MILD","MEDIUM","SWEET","HOT","ZESTY"};//String name for the type of salsa
-    int sells[5],i,max,min,sum=0;
+    int sells[5],i,max,min,sum=0;//Array indicating the number of sells, the increments
+    //The salsa that sold the most and the least and the sum of all the jars.
     
     //Output of program description and intput request
     cout<<"This program will display the amount of jars sold from each type of salsa."<<endl;
@@ -176,11 +177,11 @@ void problem3()
         {
             min=sells[i];
         }
-       sum=sum+sells[i];
     }
         //Output of results
     for(i=0;i<5;i++)
     {
+        sum=sum+sells[i];
         cout<<"For "<<names[i]<<" salsa, "<<sells[i]<<" jars were sold."<<endl;
     } 
     cout<<"The total amount of jars sold were "<<sum<<"."<<endl;
@@ -204,7 +205,8 @@ void problem3()
 void problem4()
 {
     //Declare and initialize variables
-    int i,size,n,array[size];
+    int i,size,n,array[size];//Increments for loop, size of the array, number that
+    //the user would like to compare to, an array to input the values.
     
     //Output of program description and input requests
     cout<<"This program will display all numbers that are greater than n and will allow the user"<<endl;
@@ -239,11 +241,11 @@ void problem4()
 void problem5()
 {
     //Declare and initialize the variables
-    int empId[7]={5658845,4520125,7895122,8777541,8451277,1302850,7580489};
-    int hours[7];
-    float payRate[7];
-    float wage[7];
-    int i;
+    int empId[7]={5658845,4520125,7895122,8777541,8451277,1302850,7580489};//The 7 employee id's
+    int hours[7];//Array to allow 7 different hours to be inputted by each employee
+    float payRate[7];//Array to allow 7 different pay rates to be inputted
+    float wage[7];//Wages calculated for 7 employees
+    int i;//Increments for loop
     
     cout<<fixed<<setprecision(2)<<fixed;
     
@@ -273,9 +275,9 @@ void problem5()
 void problem6()
 {
     //Declare and initialize the variables
-    char answrkey[20]={'A','D','B','B','C','B','A','B','C','D','A','C','D','B','D','C','C','A','D','B'};
-    char answruse[20];
-    int sum=0,i;
+    char answrkey[20]={'A','D','B','B','C','B','A','B','C','D','A','C','D','B','D','C','C','A','D','B'};//Answer key for driver's test
+    char answruse[20];//User's answer for the test
+    int sum=0,i;//Sum to indicate what is correct,increments for for loop
     
     //Output of program description and input of answers
     cout<<"This program will determine the answers that are correct from the user";
@@ -316,14 +318,14 @@ void problem6()
 void problem7()
 {
     //Declare and initialize the variables
-    string stuName[5];
-    char letGra[5];
-    float stuSco[4],sum[5]={0};
-    float stuSco2[4];
-    float stuSco3[4];
-    float stuSco4[4];
-    float stuSco5[4];
-    int i;
+    string stuName[5];//Array to allow five student names
+    char letGra[5];//Array to show 5 letter grades
+    float stuSco[4],sum[5]={0};//The 4 scores for the first students and the average
+    float stuSco2[4];//The 4 scores for the second student
+    float stuSco3[4];//The 4 scores for the third student
+    float stuSco4[4];//The 4 scores for the fourth student
+    float stuSco5[4];//The 4 scores for the fifth student
+    int i;//Increments for the for loop
     cout<<fixed<<setprecision(2)<<showpoint;
     
     //Output of program description
