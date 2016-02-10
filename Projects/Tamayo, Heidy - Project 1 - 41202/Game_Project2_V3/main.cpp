@@ -18,26 +18,27 @@ using namespace std;
 //Global Constants
 
 //Functional Prototypes
-string comGen(string [],string []);//Function that generates the computer choices
-void useGen(string[]);
-void compare();
+void comGen(string [],string []);//Function to generate the 4 random colors from the computer
+void useGen(string[]);//Function to allow the user to enter their four colors
+void compare(string [],string []);
 void hint();
 
 //Execution Begins Here
 int main(int argc, char** argv) {
-        //Set the random number seed
-        srand(time(NULL));
+    //Set the random number seed
+    srand(time(NULL));
 
-        //Declare and initialize variable  
-        string choice[4];//The 4 colors the user chooses
-        string compran[4]; //The 4 colors the computer generates
-        string com[8]={"RED","BLUE","GREEN","BROWN","WHITE","BLACK","ORANGE","YELLOW"};//Array from what the computer could pick from
-        char numTry=10.0f;//The number of tries the user gets
-        char answer, hint;//The response of whether the user would like to play again or take a hint
-        float n=1, percent;//The intervals of the turns, the percentage of the accuracy 
-        int a[4];//Array that generates the random colors for the computer
-        bool hint2=true;
-        //ofstream out;
+    //Declare and initialize variable  
+    string com[8]={"RED","BLUE","GREEN","BROWN","WHITE","BLACK","ORANGE","YELLOW"};//Array that the computer picks from
+    string compran[4]; //The 4 colors the computer generates
+    string choice[4];//The 4 colors the user chooses
+    int limit;
+    int numTry=10;//The number of tries the user gets before it is considered they have lost.
+
+    char answer, hint;//The response of whether the user would like to play again or take a hint
+    float n=1, percent;//The intervals of the turns, the percentage of the accuracy 
+    bool hint2=true;
+    //ofstream out;
         
     //Open the file
 //    out.open("MastermindProject.dat");
@@ -46,56 +47,30 @@ int main(int argc, char** argv) {
 //    do
 //    {
         //Output description
-        cout<<"This program will run the game known as Mastermind where you are given"<<endl;
-        cout<<"10 chances to guess the 4 colors the computer picked randomly. The order"<<endl;
-        cout<<"of the colors also matters in this game."<<endl;
+        cout<<"This program will run the game known as Mastermind."<<endl;
         cout<<"Your color choices are red, blue, green, brown, white, black, orange, and yellow."<<endl;
-        cout<<"computer's colors"<<endl;
+        cout<<"You have 10 chances to guess the 4 colors the computer picked randomly before you lose"<<endl;
+        cout<<"but are given the chance to play more times. With that being said how many tries would"<<endl;
+        cout<<"like? Please remember that order matters in this games."<<endl;
+        cin>>limit;
         
-        //Determining colors by the computer
-        comGen(com,compran);
+        limit=limit>numTry?limit:numTry;
         
-        //Asking for the user their four color choices
-        useGen(choice);
+        while (n<=limit)
+        {
+            //Determining colors by the computer
+            comGen(com,compran);
         
-        
-        
-        
-        
-               
-
-//        numTry=numTry<n?numTry:n;//Ternary operator
-        
-        //While loop to only allow the user ten tries
-//        while(n<=10)
-//        {
-//            useGen(choice);
-                
-//            //if else statement to determine if the user has won or needs hints
-//            if(compran[0]==choice[0]&&compran[1]==choice[1]&&compran[2]==choice[2]&&compran[3]==choice[3])
-//            {
-//                //Output of results
-//                cout<<fixed<<setprecision(1)<<showpoint;
-//                cout<<endl<<"You have won the game!"<<endl;
-//                percent=((10-n)*10)/numTry;
-//                cout<<"It took you "<<n<<" tries to solve the game! Based on your number of tries, your";
-//                cout<<" percentage is "<<percent<<"% accuracy!"<<endl;
-//                n=n+10;
-//            }
-//            else
-//            {
-//                
-//                hint();
-//                }
-//                cout<<endl<<"You have used up "<<n<<" tries, you have "<<10-n<<" tries left."<<endl<<endl;
-//                if (n==10)
-//                {
-//                    //Output of results after all tries have been used up
-//                    cout<<"You have used all your tries and have lost the game."<<endl<<endl;
-//                }
-//                n++;
-//            }
-//        }
+            //The color the user wants to pick
+            useGen(choice);
+            cout<<endl<<"You have used up "<<n<<" tries, you have "<<limit-n<<" tries left."<<endl<<endl;
+            if (n==10)
+            {
+                //Output of results after all tries have been used up
+                cout<<"You have used all your tries and have lost the game."<<endl<<endl;
+            }
+            n++;
+        }
         
         //Output of results
 //        cout<<"Your choices from left to right are           "<<choice1<<" "<<choice2<<" "<<choice3<<" "<<choice4<<endl;
@@ -123,12 +98,12 @@ int main(int argc, char** argv) {
 //Outputs:
 //  pos->Index where value is found
 //******************************************************************************
-string comGen (string com[], string compran[])
+void comGen (string com[], string compran[])
 {   for (int i=0;i<4;i++)
     {
         int index=rand()%8;
         compran[i]=com[index];
-        cout<<compran[i]<<"  ";
+        cout<<compran[i]<<" ";
     }
     cout<<endl;
 }
@@ -151,13 +126,40 @@ void useGen(string choice[])
     for (int i=0;i<4;i++)
     {
         cin>>choice[i];
-        for (int j=0;j<choice[i].size();i++)
-        {
-            choice[i][j]=toupper(choice[i][j]);
-        }
-        cout<<choice[i]<<endl;
+        if (choice[i]==choice[0]){
+            for (int p=0;p<choice[0].size();p++){
+                choice[0][p]=toupper(choice[0][p]);}}
+        if (choice[i]==choice[1]){
+            for (int p=0;p<choice[1].size();p++){
+                choice[1][p]=toupper(choice[1][p]);}}
+        if (choice[i]==choice[2]){
+            for (int p=0;p<choice[2].size();p++){
+                choice[2][p]=toupper(choice[2][p]);}}
+        if (choice[i]==choice[3]){
+            for (int p=0;p<choice[3].size();p++){
+                choice[3][p]=toupper(choice[3][p]);}}
+        cout<<choice[i]<<" ";
     }
 }
+//void compare(string compran[],string choice[])
+//{
+//    if(compran[0]==choice[0]&&compran[1]==choice[1]&&compran[2]==choice[2]&&compran[3]==choice[3])
+//    {
+//        float percent;
+//        //Output of results
+//        cout<<fixed<<setprecision(1)<<showpoint;
+//        cout<<endl<<"You have won the game!"<<endl;
+//        percent=((10-n)*10)/numTry;
+//        cout<<"It took you "<<n<<" tries to solve the game! Based on your number of tries, your";
+//        cout<<" percentage is "<<percent<<"% accuracy!"<<endl;
+//        n=n+10;
+//    }
+//    else
+//    {
+//        
+//       hint();
+//    }
+//}
 //void hint()
 //{
 //    cout<<"One or more colors is incorrect. Would you like a hint? Type y for yes."<<endl;

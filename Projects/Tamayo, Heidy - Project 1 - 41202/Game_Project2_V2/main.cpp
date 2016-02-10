@@ -18,8 +18,8 @@ using namespace std;
 //Global Constants
 
 //Functional Prototypes
-string comGen(string [],string []);//Function that generates the computer choices
-void useGen(string[]);
+void comGen(string [],string []);//Function to generate the 4 random colors from the computer
+void useGen(string[]);//Function to allow the user to enter their four colors
 void compare();
 void hint();
 
@@ -29,13 +29,14 @@ int main(int argc, char** argv) {
         srand(time(NULL));
 
         //Declare and initialize variable  
-        string choice[4];//The 4 colors the user chooses
+        string com[8]={"RED","BLUE","GREEN","BROWN","WHITE","BLACK","ORANGE","YELLOW"};//Array that the computer picks from
         string compran[4]; //The 4 colors the computer generates
-        string com[8]={"RED","BLUE","GREEN","BROWN","WHITE","BLACK","ORANGE","YELLOW"};//Array from what the computer could pick from
+        string choice[4];//The 4 colors the user chooses
+        
+        
         char numTry=10.0f;//The number of tries the user gets
         char answer, hint;//The response of whether the user would like to play again or take a hint
         float n=1, percent;//The intervals of the turns, the percentage of the accuracy 
-        int a[4];//Array that generates the random colors for the computer
         bool hint2=true;
         //ofstream out;
         
@@ -55,7 +56,7 @@ int main(int argc, char** argv) {
         //Determining colors by the computer
         comGen(com,compran);
         
-        //Asking for the user their four color choices
+        //The color the user wants to pick
         useGen(choice);
         
         
@@ -123,12 +124,12 @@ int main(int argc, char** argv) {
 //Outputs:
 //  pos->Index where value is found
 //******************************************************************************
-string comGen (string com[], string compran[])
+void comGen (string com[], string compran[])
 {   for (int i=0;i<4;i++)
     {
         int index=rand()%8;
         compran[i]=com[index];
-        cout<<compran[i]<<"  ";
+        cout<<compran[i]<<" ";
     }
     cout<<endl;
 }
@@ -151,11 +152,35 @@ void useGen(string choice[])
     for (int i=0;i<4;i++)
     {
         cin>>choice[i];
-        for (int j=0;j<choice[i].size();i++)
+        if (choice[i]==choice[0])
         {
-            choice[i][j]=toupper(choice[i][j]);
+            for (int p=0;p<choice[0].size();p++)
+            {
+                choice[0][p]=toupper(choice[0][p]);
+            }
         }
-        cout<<choice[i]<<endl;
+        if (choice[i]==choice[1])
+        {
+            for (int p=0;p<choice[1].size();p++)
+            {
+                choice[1][p]=toupper(choice[1][p]);
+            }
+        }
+        if (choice[i]==choice[2])
+        {
+            for (int p=0;p<choice[2].size();p++)
+            {
+                choice[2][p]=toupper(choice[2][p]);
+            }
+        }
+        if (choice[i]==choice[3])
+        {
+            for (int p=0;p<choice[3].size();p++)
+            {
+                choice[3][p]=toupper(choice[3][p]);
+            }
+        }
+        cout<<choice[i]<<" ";
     }
 }
 //void hint()
