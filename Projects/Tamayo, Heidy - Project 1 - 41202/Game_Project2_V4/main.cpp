@@ -25,6 +25,7 @@ void compare(string [],string [], int, float);
 void hints(string [],string [],bool,char);
 void listing(string [],string [],float ,int&,vector<string>&);
 string repAry(string []);
+int determ(string [],string []);
 
 //Execution Begins Here
 int main(int argc, char** argv) {
@@ -42,14 +43,14 @@ int main(int argc, char** argv) {
     bool hint2=true;
     
     vector<string>array;
-    //ofstream out;
+    ofstream out;
         
     //Open the file
-//    out.open("MastermindProject.dat");
-//    
+    out.open("MastermindProject.dat");
+    
     //Do while loop to see if the user would like to play again
-//    do
-//    {
+    do
+    {
         //Output description
         cout<<"This program will run the game known as Mastermind."<<endl;
         cout<<"Your color choices are red, blue, green, brown, white, black, orange, and yellow."<<endl;
@@ -87,18 +88,17 @@ int main(int argc, char** argv) {
         }
         
         //Output of results
-//        cout<<"Your choices from left to right are           "<<choice1<<" "<<choice2<<" "<<choice3<<" "<<choice4<<endl;
-//        //cout<<"The computer's choices from left to right are "<<compran1<<" "<<compran2<<" "<<compran3<<" "<<compran4<<endl;
-//        
-//        cout<<endl<<"Would you like to play again?"<<endl;
-//        cin>>answer;
-//        cout<<endl;
-//        answer=toupper(answer);
-//        n=1;
-//    }while(answer=='Y');
-//    
-//    //Exit stage right
-//    out.close();
+        cout<<"Your choices from left to right are           "<<choice[1]<<" "<<choice[2]<<" "<<choice[3]<<" "<<choice[4]<<endl;
+        
+        cout<<endl<<"Would you like to play again?"<<endl;
+        cin>>answer;
+        cout<<endl;
+        answer=toupper(answer);
+        n=1;
+    }while(answer=='Y');
+    
+    //Exit stage right
+    out.close();
     return 0;
 }
 //000000011111111112222222222333333333344444444445555555555666666666677777777778
@@ -240,4 +240,29 @@ string repAry(string choice[])
         stri+=choice[i];
    }
    return stri; 
+}
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
+//345678901234567890123456789012345678901234567890123456789012345678901234567890
+//                      Linear Search
+//Inputs:
+//  a->Array or List
+//  n->Size of List
+//  strt->Starting Position
+//  val->Value to find
+//Outputs:
+//  pos->Index where value is found
+//******************************************************************************
+int determ(string pick[],string choice[])
+{
+    int i = 0;			
+    int pos = -1; //Records position of search value		
+    bool found = false;		
+    while (i <4 && !found){
+        if (pick[i] == choice[i]){
+            found = true;
+            pos = i;		  			
+        }
+        i++;					
+    }
+    return pos;				
 }
