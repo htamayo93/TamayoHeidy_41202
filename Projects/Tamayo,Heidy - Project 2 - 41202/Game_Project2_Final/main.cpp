@@ -25,7 +25,6 @@ char hints(string [],string [],bool,char);//hints the user may have if they choo
 int determ(string [],string []);//Determine the linear search 
 int tries(int);//The number of tries the user would want
 
-
 //Execution Begins Here
 int main(int argc, char** argv) {
     
@@ -96,7 +95,7 @@ int main(int argc, char** argv) {
         //Output of results
         cout<<"The computer choices were            "<<compran[0]<<" "<<compran[1]<<" "<<compran[2]<<" "<<compran[3]<<endl;
         cout<<"Your final results were              "<<choice[0]<<" "<<choice[1]<<" "<<choice[2]<<" "<<choice[3]<<endl;
-        cout<<"The linear search  was "<<determ<<"."<<endl;
+        cout<<"The linear search was "<<determ<<"."<<endl;
         cout<<endl<<"Would you like to play again?"<<endl;
         cin>>answer;
         cout<<endl;
