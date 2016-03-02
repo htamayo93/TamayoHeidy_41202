@@ -7,7 +7,6 @@
 
 //System Libraries
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 //User Libraries
@@ -19,7 +18,7 @@ using namespace std;
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Declare and initialize variables
-    float cel,far,conv=9/5;
+    float cel,far;
     
     //Output of program description and the input of the Celsius temperature. 
     cout<<"This program will convert the Celsius temperature inputted to Fahrenheit."<<endl;
@@ -27,8 +26,7 @@ int main(int argc, char** argv) {
     cin>>cel;
     
     //Conversion of Celsius to Fahrenheit
-    cout<<conv<<endl;
-    far=(conv*cel)+32;
+    far=(9*cel/5)+32;
     
     //Output of results
     cout<<"The degrees of Celsius inputted was "<<cel<<" degrees."<<endl;
