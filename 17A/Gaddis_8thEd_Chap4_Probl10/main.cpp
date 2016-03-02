@@ -7,7 +7,6 @@
 
 //System Libraries
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 //User Libraries
@@ -30,8 +29,11 @@ int main(int argc, char** argv) {
     cin>>month;
     cout<<"Enter the year you want."<<endl;
     cin>>year;
-    
-    if (month==1||month==3||month==5||month==7||month==8||month==10||month==12)
+    if (month<0||month>12)
+    {
+        cout<<"Error:Please enter a valid month."<<endl;
+    }
+    else if (month==1||month==3||month==5||month==7||month==8||month==10||month==12)
     {
         cout<<"There are 31 days."<<endl;
     }
