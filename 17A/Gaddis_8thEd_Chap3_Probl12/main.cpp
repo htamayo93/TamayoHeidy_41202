@@ -18,7 +18,7 @@ using namespace std;
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Declare and initialize variables
-    float cel,far;
+    float cel,far;//Celsius,Fahrenheit
     
     //Output of program description and the input of the Celsius temperature. 
     cout<<"This program will convert the Celsius temperature inputted to Fahrenheit."<<endl;

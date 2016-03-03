@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Heidy Tamayo
  * Created on February 29, 2016, 2:27 PM
- * Purpose: 
+ * Purpose: Converts Fahrenheit to Celsius from 0 to 20 degrees 
  */
 
 //System Libraries
@@ -21,21 +21,28 @@ void celsius(float);
 int main(int argc, char** argv) {
     //Declare and initialize variables
     float faren=20;
+    
+    //Output of program description 
     cout<<"This program will convert the Fahrenheit temperature entered by the user."<<endl;
     cout<<"This will then be converted to Celsius."<<endl;
-   celsius(faren);
+   celsius(faren);//Function that converts the Fahrenheit to Celsius
     
-
  return 0;
 }
 
 void celsius(float faren)
 {
+    //Sets the decimal of the Celsius to two places
     cout<<fixed<<setprecision(2);
-    float cel,i=0;
-    for (i;i<=faren;i++)
+    float cel;
+    
+    //For loop that repeats the calculation of Celsius from Fahrenheit until the end
+    for (int i=0;i<=faren;i++)
     { 
-        cel=1.8*(i-32);
+        cel=5*(i-32);
+        cel=cel/9;
+        
+        //Output of results
         cout<<i<<" degrees Fahrenheit converted to Celsius is "<<cel<<" degrees Celsius."<<endl;
     }
 }
